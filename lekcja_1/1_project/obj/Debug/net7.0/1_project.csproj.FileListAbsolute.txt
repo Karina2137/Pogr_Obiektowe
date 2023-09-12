@@ -1,0 +1,14 @@
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\bin\Debug\net7.0\1_project.exe
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\bin\Debug\net7.0\1_project.deps.json
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\bin\Debug\net7.0\1_project.runtimeconfig.json
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\bin\Debug\net7.0\1_project.dll
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\bin\Debug\net7.0\1_project.pdb
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\obj\Debug\net7.0\1_project.GeneratedMSBuildEditorConfig.editorconfig
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\obj\Debug\net7.0\1_project.AssemblyInfoInputs.cache
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\obj\Debug\net7.0\1_project.AssemblyInfo.cs
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\obj\Debug\net7.0\1_project.csproj.CoreCompileInputs.cache
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\obj\Debug\net7.0\1_project.dll
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\obj\Debug\net7.0\refint\1_project.dll
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\obj\Debug\net7.0\1_project.pdb
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\obj\Debug\net7.0\1_project.genruntimeconfig.cache
+C:\PoOb\Pogr_Obiektowe\lekcja_1\1_project\obj\Debug\net7.0\ref\1_project.dll
