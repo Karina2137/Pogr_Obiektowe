@@ -33,7 +33,7 @@ namespace _2_project_2
              * ushort 0 - 65535 (16 bitów => 2 bajt)
              * int -2 147 483 648 - 2 147 483 647 (32 bitów => 4 bajt)
              * uint 0 - 4 294 967 295  (32 bitów => 4 bajt)
-             * long - -9223372036854775808 - 9223372036854775807 (64 bitów => 8 bajtów)
+             * long - -9 223 372 036 854 775 808 - 9 223 372 036 854 775 807 (64 bitów => 8 bajtów)
              * ulong - 0 - 18 446 744 073 709 551 615 (64 bitów => 8 bajtów, ponad 18 trylionów)
              * 
              * bool (true/false) ile ma bitów/bajtów
