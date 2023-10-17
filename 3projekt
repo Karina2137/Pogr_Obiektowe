@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace _3_project
@@ -47,12 +48,16 @@ namespace _3_project
                 }
                 if (IsTriangle(a, b, c))
                 {
-                    Console.WriteLine("Pole trójkąta o bokach {0}, {1}, {2} wynosi: {3:F4}", a, b, c, Heron(a, b, c));
+                    Console.OutputEncoding = System.Text.Encoding.Unicode;
                     isCorrect = true;
+                    Console.WriteLine("Pole trójkąta o bokach {0}, {1}, {2} wynosi: {3:F4}cm\u00B2", a, b, c, Heron(a, b, c));
+                    Console.OutputEncoding = System.Text.Encoding.Default;
                 }
                 else
                 {
                     Console.WriteLine("Podane boki nie tworzą trójkąta");
+                    Thread.Sleep(2000);
+                    Console.Clear();
                 }
             } while (!isCorrect);
 
