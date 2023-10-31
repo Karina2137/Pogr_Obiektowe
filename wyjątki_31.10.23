@@ -1,0 +1,152 @@
+using Microsoft.SqlServer.Server;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            /*bool flaga = false;
+            while (flaga == false)
+            {
+                try
+                {
+                    Console.WriteLine("Podaj liczbę a: ");
+                    string x = Console.ReadLine();
+                    if (x == "q")
+                    {
+                        Console.WriteLine("Dziękujemy za wykorzystanie programu");
+                        break;
+                    }
+
+                    int a = Convert.ToInt32(x);
+                    if (a < 0)
+                        throw new Exception("Wprowadzona liczba nie może być ujemna. Wprowadź ponownie prawidłowe dane.");
+                    Console.WriteLine($"Pierwiastek z {a} jest równy {Math.Sqrt(a):F2}");
+                    Console.WriteLine("Wpisz q jeśli chcesz zamknąć program:");
+                    
+                    
+
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+                    Console.WriteLine("Wprowadzona liczba nie może być ujemna. Wprowadź ponownie prawidłowe dane.");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Wprowadzono nieprawidłowe dane. Wprowadź ponownie prawidłowe dane.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Błąd: {ex.Message}");
+                }
+                
+            } */
+
+            /*string input;
+            do
+            {
+                Console.Write("Podaj liczbę całkowitą lub 0, aby wyjść z programu:");
+                input = Console.ReadLine();
+                if (input == "q")
+                {
+                    break;
+                }
+
+                try
+                {
+                    int number = int.Parse(input);
+                    if (number < 0)
+                    {
+                        throw new ArgumentOutOfRangeException("Liczba nie morże być ujemna");
+                    }
+                    if (number > 0)
+                    {
+                        double sqrt = Math.Sqrt(number);
+                        Console.WriteLine($"\nPierwiastek z {number} = {sqrt}");
+                    }
+                }
+                catch (ArgumentOutOfRangeException ex)
+                {
+                    Console.WriteLine($"Błąd: {ex.ParamName}");
+                }
+                catch (FormatException ex)
+                {
+                    Console.WriteLine("\nNieprawidłowe dane wejściowe. Podaj prawidłową liczbę całkowitą.");
+                }
+                catch (OverflowException ex)
+                {
+                    Console.WriteLine($"\nNieprawidłowe dane wejściowe. Przekroczono zakres liczby <{int.MinValue}, {int.MaxValue}>");
+                }
+                finally
+                {
+                    Console.WriteLine("\n Dziękujemy za skorzystanie z programu");
+                }
+                
+            } while (input != "q");*/
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+            /*Napisz program w C#, który wczytuje od użytkownika 5 liczb całkowitych i zapisuje je w tablicy. 
+            Następnie program prosi użytkownika o podanie indeksu tablicy i wyświetla liczbę znajdującą się pod tym indeksem. 
+            Jeśli użytkownik wprowadzi indeks spoza zakresu tablicy, program powinien zgłosić wyjątek ArgumentOutOfRangeException
+            i wyświetlić odpowiedni komunikat. 
+            Jeśli użytkownik wprowadzi nieprawidłowe dane, program powinien zgłosić wyjątek FormatException
+            i poprosić o ponowne wprowadzenie danych. Program powinien działać w pętli, dopóki użytkownik nie wpisze q. 
+            Użyj instrukcji try-catch do obsługi wyjątków.
+            Jeśli liczba jest ujemna, program powinien zgłosić wyjątek ArgumentOutOfRangeException
+            i wyświetlić odpowiedni komunikat. 
+            Jeśli użytkownik wprowadzi nieprawidłowe dane, program powinien zgłosić wyjątek FormatException i poprosić o ponowne wprowadzenie liczby. */
+
+            string input;
+            do
+            {
+                int[] T = new int[5];
+
+                for (int i = 0; i < T.Length; i++)
+                {
+                    Console.Write($"Podaj liczbę {i + 1}: ");
+                    int a = int.Parse(Console.ReadLine());
+                    T[i] = a;
+                }
+                Console.Write("Podaj index elementu tablicy, który chcesz wyświetlić (0 - 4): ");
+                input = Console.ReadLine();
+                if (input == "q")
+                {
+                    break;
+                }
+                try
+                {
+                    int l = int.Parse(input);
+                    if (l <= 0 && l >= 5)
+                    {
+                        throw new ArgumentOutOfRangeException("Podanego indexa nie ma w tablicy");
+                    }
+                    Console.WriteLine(T[l]);
+                    
+                }
+                catch (FormatException ex)
+                {
+                    Console.WriteLine("Nieprawidłowe dane. Wprowadź poprawną liczbę całkowitą");
+                }
+                catch (OverflowException ex)
+                {
+                    Console.WriteLine($"Nieprawidłowe dane. Liczba jest poza zakresem <{int.MaxValue}, {int.MinValue}>");
+                }
+                
+
+            } while (input != "q") ;
+
+                Console.ReadKey();
+        }
+    }
+}
